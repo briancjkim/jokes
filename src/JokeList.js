@@ -88,7 +88,6 @@ export class JokeList extends Component {
   }
 
   render() {
-    console.log(this.seenJoke);
     return (
       <div className="JokeList">
         <div className="JokeList-sidebar">
