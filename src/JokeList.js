@@ -22,7 +22,12 @@ export class JokeList extends Component {
     // 맨처음 pageload될시에 작동 조크를 불러온다.
     // 그후에 페이지 리로드될때마다 localstorage에서 가져오기때문에 작동안함.
     if (this.state.jokes.length === 0) {
-      this.loadJokes();
+      this.setState(
+        {
+          loading: true
+        },
+        this.loadJokes
+      );
     }
   }
 
